@@ -44,9 +44,9 @@ def get_ipadapter_file(preset, is_sdxl):
             pattern = r'ip.adapter.sd15\.(safetensors|bin)$'
     elif preset.startswith("vit-g"):
         if is_sdxl:
-            pattern = r'ip.adapter.sdxl\.(safetensors|bin)$'
+            pattern = r'vitg-xl|ip.adapter.sdxl\.(safetensors|bin)$'
         else:
-            pattern = r'sd15.vit.g\.(safetensors|bin)$'
+            pattern = r'vitg-1.5|sd15.vit.g\.(safetensors|bin)$'
     elif preset.startswith("plus ("):
         if is_sdxl:
             pattern = r'plus.sdxl.vit.h\.(safetensors|bin)$'
